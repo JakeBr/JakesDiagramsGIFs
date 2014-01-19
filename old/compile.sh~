@@ -1,0 +1,8 @@
+ghc --make $1
+./diagramsBatch ./$1 $2 900 $1x
+./mkGIFnd $1x $2 5 $1.gif
+rm $1x*
+rm $1
+rm $1.o
+rm $1.hi
+firefox $1.gif
